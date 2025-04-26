@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 37.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 37.5: El Laberinto de Decisiones</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 16**: 1 Kinderbot y 10 iBricks por cada pareja. Necesitarás algo para marcar DOS casillas/iBricks como "especiales" (ej. stickers de diferentes colores o formas: estrella y luna). Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡El Juego del Laberinto Mágico! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir el concepto de un juego de tablero más complejo con múltiples reglas especiales.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 17** “Bienvenida”. Saluda como maestros de juegos listos para un nuevo desafío.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Hola, maestros estrategas del CODE SQUAD! ¿Listos para un juego de mesa aún más emocionante que el de la Casilla Sorpresa? ¡Hoy vamos a crear y jugar al 'Laberinto de Decisiones Mágicas'! ¡Un juego donde cada paso cuenta y hay ¡DOS tipos de casillas especiales!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 18** "Gimnasio CODE SQUAD". Explica que necesitan entrenar la mente para recordar múltiples reglas y planificar con anticipación.</td>
+                <td>
+                     <div class="dialogue">
+                        "Este laberinto es más complicado... ¡necesitamos cerebros súper poderosos para recordar las reglas de cada casilla especial Y planear cómo llegar a la meta! ¡Vamos al Gimnasio Cerebral a potenciar nuestra memoria y nuestra capacidad de pensar en varias cosas a la vez!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar seguir secuencias largas con atención a los detalles, preparándose para programar rutas más largas y complejas.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 19** “Baile de Algoritmos”. Guía el baile, enfatizando la precisión y el recuerdo de la secuencia completa.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Bailarines estrategas! ¡Este baile es como nuestro laberinto: largo y con muchos pasos! ¡Hay que recordar toda la secuencia! ¡Adelante, gira, atrás, adelante, gira! ¡Pongan mucha atención a cada instrucción y sigan el orden perfecto! ¡Vamos a calentar esas neuronas bailarinas!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - El Laberinto de Decisiones -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">❓ Actividad 3: ¡Las Reglas del Laberinto Mágico! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia del laberinto, construir el tablero con DOS casillas especiales y definir el reto condicional múltiple.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 20**. Narra la historia del Laberinto encontrado en el Cuartel General, con dos tipos de marcas mágicas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Increíble, CODE SQUAD! ¡Mientras ordenábamos el Cuartel General, encontramos un tablero de juego antiquísimo! ¡Se llama 'El Laberinto de Decisiones Mágicas'! El objetivo es guiar a Kinderbot por el camino de baldosas (nuestros bloques) hasta la Gema del Poder que está al final. ¡Pero cuidado! ¡El mapa muestra que hay DOS tipos de baldosas con marcas mágicas!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 21**. Explica el reto: construir el camino lineal, marcar DOS baldosas con símbolos diferentes (ej. estrella y luna) y explicar que cada una tiene una regla diferente ("Si caes en Estrella -> haz X", "Si caes en Luna -> haz Y").</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Aquí está el desafío, estrategas! Construiremos el camino del laberinto con nuestros bloques en fila. Luego, elegiremos DOS baldosas diferentes y las marcaremos con símbolos distintos: una con una ESTRELLA ⭐ y otra con una LUNA 🌙 (usando stickers o marcadores). ¡Y cada marca tiene su propia regla mágica! Por ejemplo: '**Si** Kinderbot aterriza en la ESTRELLA ⭐, **entonces** ¡tendrá que GIRAR! Pero **si** aterriza en la LUNA 🌙, **entonces** ¡tendrá que RETROCEDER! ¡Son dos reglas diferentes en el mismo juego! ¿Listos para construir el laberinto y programar a Kinderbot para que siga las reglas mágicas?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Arquitectos del Laberinto! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para construir el tablero, colocar estratégicamente las casillas especiales y planificar la ruta.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 22** “Formación de Equipos”. Explica que diseñar laberintos complejos requiere trabajo en equipo. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Pequeños arquitectos! ¡Diseñar un laberinto con reglas mágicas es un trabajo para mentes maestras trabajando juntas! ¡En equipo pueden construir el camino, decidir dónde poner la Estrella y la Luna para que sea más emocionante, y planear la ruta de Kinderbot! ¡Formen sus Equipos de Arquitectos del Laberinto! ¡Busquen a su compañero diseñador!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a construir el camino lineal y a colocar sus dos marcas especiales (Estrella y Luna).</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Arquitectos listos? ¡Genial! ¡Construyan su camino de baldosas (bloques) en fila! Ahora, ¡la parte divertida! Decidan juntos dónde van a poner la baldosa ESTRELLA ⭐ y dónde la baldosa LUNA 🌙. ¡Pueden ponerlas donde quieran en el camino! ¡Preparen su laberinto mágico!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando con Dos Reglas! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código Mágico Activado! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir el tablero, programar la secuencia de avance y (mentalmente o con ayuda) aplicar las DOS reglas condicionales si Kinderbot aterriza en ellas.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir Tablero y Anunciar Reglas -->
+             <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la **DIAPOSITIVA 23** "¡Laberinto Listo y Reglas Claras!". Asegúrate de que los tableros estén construidos con las 2 marcas. Anuncia las reglas específicas para el nivel. Repasa botones A, G, At.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Qué bien se ven esos Laberintos Mágicos con su Estrella ⭐ y su Luna 🌙! Ahora, ¡escuchen bien las DOS reglas secretas de hoy! (Anuncia las reglas según el nivel abajo). Recuerden: Adelante para avanzar, y la acción extra (Girar, Atrás, etc.) ¡SÓLO si caen en la marca correcta! ¡A programar con cuidado!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 24** "Misión K1: Una Regla Simple". Tablero de 6 casillas, 1 marca (Estrella). Regla: "Avanza 4 pasos. Si el 4º es Estrella -> Gira". Guía para programar 4 pasos (A,A,A,A) y *si aplica*, añadir 1 Giro (G). (Simplificado a 1 regla para K1).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Tablero de 6 baldosas, marquen UNA con Estrella ⭐! La regla: ¡Avanza 4 pasos! Cuenten... 1, 2, 3, 4. ¿El cuarto paso cae en la Estrella? **Si** sí, **entonces** después de los 4 pasos, ¡añaden UN 'Girar'! Si NO, ¡no hacen nada más! Programen 'Adelante, Adelante, Adelante, Adelante'. Miren dónde cae. ¿Es Estrella? Si sí, añadan 'Girar'. ¡Preparen código! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 25** "Misión K2: Dos Reglas Simples". Tablero de 8 casillas, 2 marcas (Estrella, Luna). Reglas: "Avanza 6 pasos. Si 3º es Estrella -> Atrás 1. Si 6º es Luna -> Gira". Guía para programar 6 pasos (A,A,A,A,A,A) y planear mentalmente las acciones extras si aplican en esos pasos.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Arquitectos K2! ¡Tablero de 8 baldosas con Estrella ⭐ y Luna 🌙! Reglas: ¡Avanza 6 pasos! Piensen: ¿El TERCER paso cae en Estrella? Si sí, la acción extra será 'Atrás'. ¿El SEXTO paso cae en Luna? Si sí, la acción extra será 'Girar'. Programen los 6 pasos 'Adelante'. Luego, piensen: ¿Necesito añadir 'Atrás' después del tercero? ¿Necesito añadir 'Girar' después del sexto? ¡Planean las acciones extras! ¡Preparen código! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 26** "Misión K3: ¡Anticipando las Reglas!". Tablero de 8-10 casillas, 2 marcas (Estrella, Luna). Reglas: "Avanza 7 pasos. Si 4º es Estrella -> Gira Der. Si 7º es Luna -> Atrás 2". Guiar para PLANIFICAR los 8 pasos anticipando el efecto de las reglas y ajustar la secuencia *antes* de programar si es necesario para llegar a la meta.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros Arquitectos K3! ¡Tablero de 8 a 10 baldosas con Estrella ⭐ y Luna 🌙! Reglas: ¡Avanza 7 pasos! PERO, **Si** el 4º paso cae en Estrella ⭐, **entonces** ¡Girar Derecha! Y **Si** el 7º paso cae en Luna 🌙, **entonces** ¡Atrás DOS veces! ¡OJO! ¡Esto puede cambiar toda la ruta! Antes de programar: ¡Planean los 8 pasos en papel o en su mente! ¿Si giro en el 4º, cómo llego a la meta? ¿Si retrocedo en el 7º, me alejo? ¡Quizás necesiten ajustar los pasos *después* de la regla! ¡Planean la secuencia completa de 8 pasos pensando en las reglas! Una vez que tengan el plan, ¡programen! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Navegando el Laberinto! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-laberinto')">
+        <div class="title">🚀 Actividad 6: ¡Dentro del Laberinto Mágico! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código y observar si Kinderbot aplica correctamente las reglas condicionales de las casillas especiales.</div>
+    </div>
+    <div id="probando-laberinto" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 27** "¡Éxito K1!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si avanza 4 y aplica la regla de la Estrella si corresponde. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Kinderbot al inicio del laberinto! ¿Listos con el código? ¡Presionen 'Go'! Contemos: 1, 2, 3, 4... ¿Cayó en la Estrella ⭐? Si sí, ¿giró? ¡Genial! ¡La regla mágica funcionó! Si no, ¡llegó al cuarto paso perfecto! ¡Buen trabajo!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 28** "¡Éxito K2!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si aplica correctamente las reglas de la Estrella (paso 3) y la Luna (paso 6) si aterriza en ellas. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Arquitectos K2! ¡Kinderbot listo! ¿Preparados con su código de 6 pasos y las reglas en mente? ¡Presionen 'Go'! ¡Miremos atentos! Paso 3... ¿era Estrella ⭐? ¿Retrocedió? Paso 6... ¿era Luna 🌙? ¿Giró? ¡Increíble cómo sigue las reglas! ¡Llegaron al final del laberinto!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 29** "¡Éxito K3!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si la secuencia de 8 pasos planificada funciona, considerando las reglas. Fomentar debugging si el plan no funcionó como esperaban. Celebrar la planificación y ejecución.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡El momento de la verdad! ¡Kinderbot al inicio! ¿Listos con su secuencia maestra de 8 pasos, planeada considerando las reglas? ¡Presionen 'Go'! ¡Veamos si el plan funciona! ¿Gira en la Estrella ⭐ del paso 4? ¿Retrocede 2 en la Luna 🌙 del paso 7? ¿Llega a la meta? ¡SI LO LOGRAN, SON GENIOS DE LA ESTRATEGIA! Si algo falla, ¡excelente! Revisen su plan, vean dónde cambió la ruta por la regla, ¡y ajusten el código! ¡Superar estos laberintos es de campeones!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 37.5) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Gema del Poder Conseguida y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar la superación del laberinto, reforzar la lógica condicional múltiple y la planificación anticipada.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 30** "¡Misión Cumplida!". Cierra la historia (Kinderbot alcanza la Gema). Realiza preguntas de reflexión sobre las múltiples reglas.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡VICTORIAAAAA, CODE SQUAD! ¡Han navegado el complicado Laberinto de Decisiones Mágicas y han guiado a Kinderbot hasta la Gema del Poder! ✨ ¡Su habilidad para seguir reglas especiales es impresionante! Pensemos en este desafío mágico:
+1. ¿Cuántas casillas especiales había hoy? (¡Dos!) ¿Tenían la misma regla o reglas diferentes? (¡Diferentes!)
+2. ¿Tuvimos que programar a Kinderbot para hacer cosas diferentes dependiendo de dónde caía? (¡Sí!)
+3. (Para K3) ¿Fue útil pensar en toda la ruta y cómo afectarían las reglas *antes* de programar? ¿Por qué?
+¡Han demostrado que pueden manejar juegos con múltiples reglas y planificar como verdaderos estrategas! ¡El CODE SQUAD está listo para cualquier desafío! ¡Felicidades!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
